@@ -13,6 +13,46 @@
 
 <body>
 
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+        <button href="javascript:void(0)" class="comment_us" onclick="openNewComment()">Coméntanos!</button>
+
+        <div class="comment">
+            <div class="user_name">David Lara Manrique</div>
+            <div class="commentary">
+                ¡El mejor sitio donde comer pan de pipas con los coleguis!
+            </div>
+            <div class="date">27/04/2023</div>
+        </div>
+
+        <div class="comment">
+            <div class="user_name">Iker Acha Ríos</div>
+            <div class="commentary">
+                Buah es que es increible el sitio de verdad casi me muero durante el camino pero el mero hecho de explorar y sentirme libre y descubrir cosas me recuerda a cierto videojuegos
+            </div>
+            <div class="date">27/04/2023</div>
+        </div>
+
+    </div>
+
+    <div id="newComment" class="new_comment_form">
+        <a href="javascript:void(0)" class="closebtn" id="newCommentClose" onclick="closeNewComment()">&times;</a>
+        <form id="form">
+            <label for="fname">Nombre:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Correo:</label><br>
+            <input type="text" id="lmail" name="lmail"><br>
+            <label for="lname">Comentario:</label><br>
+            <textarea id="comment" size="30" rows= "5"></textarea><br><br>
+        </form>
+        <button onclick="addComment()">Enviar</button>
+
+        <p id="invalid_mail" style="display: none; color: red">Correo no válido</p>
+        <p id="null_name" style="display: none; color: red">Introduzca un nombre</p>
+        <p id="null_comment" style="display: none; color: red">Intodruzca un comentario</p>
+    </div>
+
     <header>
         <a href="/portada.html"><img src='img/icon.png' class='icon'></a>
     <div class="main_title">
@@ -85,6 +125,8 @@
                 </figure>
             </div>
 
+            <button onclick="openNav()", class="comment_button"><i class="fa-solid fa-comments"></i></button>
+
             <div class="iconos">
                 
                 <a href="https://twitter.com/"> <i class="fa-brands fa-x-twitter" style="font-size: 600%;"></i> </a>
@@ -101,8 +143,7 @@
 
     <footer>© 2024 - Jesús Pereira</footer>
 
-
-
+    <script src="/js/scripts.js"></script>
 
 </body>
 
