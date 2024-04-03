@@ -80,7 +80,7 @@ function insertComment(name, comment)
 {
   var tiempoTranscurrido = Date.now();
   var hoy = new Date(tiempoTranscurrido);
-  var comentario = '<div class="comment"> <div class="user_name">' + name + '</div> <div class="commentary">' + comment + '</div><div class="date">' + hoy.toLocaleDateString() + '</div></div>';
+  var comentario = '<div class="comment"> <div class="user_name">' + name + '</div> <div class="commentary">' + comment + '</div><div class="date">' + hoy.toLocaleDateString() + ' ' + hoy.getHours() + ':' + hoy.getMinutes() + ' </div></div>';
   document.getElementById("mySidenav").innerHTML += comentario;
 }
 
@@ -97,12 +97,12 @@ comment.addEventListener("input", sustituyeMalasPalabras); // Evento cada vez qu
 
 function sustituyeMalasPalabras(event) 
 {
-  document.getElementById("comment").value = document.getElementById("comment").value.replace(/p[uúù][t7][aáà]/i, " **** ");                              // PUTA
-  document.getElementById("comment").value = document.getElementById("comment").value.replace(/p[uúù][t7][oóò0]/i, " **** ");                             // PUTO
-  document.getElementById("comment").value = document.getElementById("comment").value.replace(/m[i1!][e3][r@][d4][a4]/i, " ****** ");                     // MIERDA
-  document.getElementById("comment").value = document.getElementById("comment").value.replace(/[ck][oóò0][jh][oóò0][n][eèé3][s5]/i, " ******* ");         // COJONES
-  document.getElementById("comment").value = document.getElementById("comment").value.replace(/[ck][oóò0]ñ[oóò0]/i, " **** ");                            // COÑO
-  document.getElementById("comment").value = document.getElementById("comment").value.replace(/[gj][iìí1][l][iìí1]p[oóò0]ll[aáà][s5]/i, " ********** ");  // GILIPOLLAS
-  document.getElementById("comment").value = document.getElementById("comment").value.replace(/[gj][iìí1][l][iìí1]p[oóò0]y[aáà][s5]/i, " ********* ");    // GILIPOYAS
-  document.getElementById("comment").value = document.getElementById("comment").value.replace(/[aáà][s5]q[eèé3]r[oóò0][s5][oóò0]/i, " ********* ");       // ASQUEROSO
+  document.getElementById("comment").value = document.getElementById("comment").value.replace(/ p[uúù][t7][aáà]/i , " **** ");                              // PUTA
+  document.getElementById("comment").value = document.getElementById("comment").value.replace(/ p[uúù][t7][oóò0]/i , " **** ");                             // PUTO
+  document.getElementById("comment").value = document.getElementById("comment").value.replace(/ m[i1!][e3][r@][d4][a4]/i , " ****** ");                     // MIERDA
+  document.getElementById("comment").value = document.getElementById("comment").value.replace(/ [ck][oóò0][jh][oóò0][n][eèé3][s5]/i , " ******* ");         // COJONES
+  document.getElementById("comment").value = document.getElementById("comment").value.replace(/ [ck][oóò0]ñ[oóò0]/i , " **** ");                            // COÑO
+  document.getElementById("comment").value = document.getElementById("comment").value.replace(/ [gj][iìí1][l][iìí1]p[oóò0]ll[aáà][s5]/i , " ********** ");  // GILIPOLLAS
+  document.getElementById("comment").value = document.getElementById("comment").value.replace(/ [gj][iìí1][l][iìí1]p[oóò0]y[aáà][s5]/i , " ********* ");    // GILIPOYAS
+  document.getElementById("comment").value = document.getElementById("comment").value.replace(/ [aáà][s5]q[eèé3]r[oóò0][s5][oóò0]/i , " ********* ");       // ASQUEROSO
 }
