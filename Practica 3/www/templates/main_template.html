@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MulhacenSite</title>
+    {% block styles %}{% endblock %}
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/e6af18d102.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="background: linear-gradient(to bottom right, #ff6600 0%, #6600ff 100%);">
+
+    {% block comments %}
+    {% endblock %}
+
+    <header>
+        <a href="/index.php"><img src='img/icon.png' class='icon'></a>
+        <div class="main_title">
+            <h1>MulhacénSite</h1>
+            <nav>
+                <a class = "navigators" href="index.php">Inicio</a> 
+                <a class = "navigators" href="index.php">Horarios</a> 
+                <a class = "navigators" href="index.php">Contacto</a>
+            </nav>
+        <div>
+    </header>
+
+    <main>
+        <aside>
+            <h3 style="text-align: center;">Enlaces de interés</h3>
+            <ul>
+                <li>
+                    <a href=https://www.eltiempo.es/sierra-nevada.html>Tiempo <br> <div> <i class="fa-solid fa-snowflake" style="font-size: 600%;"></i> </div></a>
+                </li>
+                <li>
+                    <a href=https://www.decathlon.es/es/deportes/montana/material-trekking-senderismo>Material  <br> <div> <i class="fas fa-hiking" style="font-size: 600%;"></i> </div></a>
+                </li>
+                <li>
+                    <a href=https://www.google.com/maps/place/Parque+Nacional+de+Sierra+Nevada/@37.0947793,-3.4032105,17z/data=!3m1!4b1!4m6!3m5!1s0xd71e37cf7fd697f:0x444b806b0cdc2126!8m2!3d37.094775!4d-3.4006356!16zL20vMDU5bjFj?hl=es&entry=ttu>Ubicación  <br> <div> <i class="fa-solid fa-location-dot" style="font-size: 600%;"></i> </div></a>
+                </li>
+            </ul> 
+        </aside>
+        
+        {% block content %}
+
+        <p> content of the page </p>
+
+        {% endblock %}
+
+    </main>
+
+    <footer>© 2024 - Jesús Pereira</footer>
+
+
+    {% block scripts %} {% endblock %}
+
+</body>
+
+</html>

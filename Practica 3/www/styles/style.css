@@ -1,0 +1,158 @@
+/* Manejador principal -------------------*/
+body {
+    display: grid;                                      /* Cuadrícula */
+    grid-template-areas:                                /* Definimos los apartados de la cuadrícula*/
+            "header"
+            "main"
+            "footer";
+    grid-gap: 10px;                                     /* Espacio entre los elementos */
+    padding: 15px;                                      /* Margen interior */
+    font-family: Verdana, Tahoma, sans-serif;                                      /* Tipo de letra en toda la web */
+}
+
+/* Enlaces de color negro y sin decoración */
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Título, icono y menús -----------------*/
+header {
+    display: grid;
+    grid-template-columns: 20% 80%;                     /* El elemento de la izq ocupa un 20% y el de la dcha un 80% */
+    gap: 40px;
+    padding: 15px;
+    background-color: #ffffff; 
+    border-radius: 15px;
+    border: 5px solid #fd5e53;
+    font-size: 150%;
+    grid-area: header;                                  /* En la cuadrícula principal va en ese hueco */
+    background-color:rgba(255, 255, 255, 0.3);
+}
+
+/* Imagen redonda */
+.icon{
+    width:150px;
+    height:150px;
+    border-radius:150px;
+    border:1px solid #666;
+    background-color: #00aae4;
+}
+
+/* Menús de navegación */
+.navigators {
+    border-radius: 15px;
+    border: 5px solid #fd5e53;
+    text-align: center;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: fit-content;
+    gap: 15px;;
+}
+
+/* Enlaces de los menús */
+nav a {
+    text-decoration: none;
+}
+
+/* Organizador de los contenidos centrales */
+main {
+    display: flex;                                      /* Elementos flexibles */
+    flex-direction: row;                                /* Se organizan en una fila entera */
+    justify-content: center;
+    width: 100%; 
+    grid-area: main;
+       
+}
+
+/* Lateral --------------------------------*/
+aside {
+    background-color: #ffffff; 
+    border-radius: 15px;
+    border: 5px solid #fd5e53;
+    width: 20%;
+    text-align: justify;
+    padding: 10px;
+    margin-right: 10px;
+    background-color:rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+aside ul { 
+    padding-left: 0px;
+}
+
+aside ul li{
+    list-style: none;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.aux_icon {
+    width: 50%;
+    height:50%;
+    object-fit: cover;
+}
+
+
+/* Actividades ---------------------------*/
+.activities {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    background-color: #ffffff; 
+    border-radius: 15px;
+    border: 5px solid #fd5e53;
+    grid-area: activities;
+    padding: 15px;
+    padding-right: 25px;
+    background-color:rgba(255, 255, 255, 0.3);
+}
+
+.activity {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 5px solid #FFC97C;
+    aspect-ratio: 1/1;                                  /* Para que siempre parezca un cuadrado. La imagen se centra */
+    
+}
+
+.activity_icon {
+    width: 100%;
+    height:80%;
+    object-fit:cover;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+}
+
+.activity_name {
+    height: 20%;
+    overflow: hidden;                                   /* Cuando el texto ocupa más de lo que debe, se oculta lo que sobra */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(220, 29, 140, 0.3);
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+}
+
+/* Pie de página -------------------------*/
+footer {
+    background-color: #ffffff; 
+    padding: 10px; 
+    border-radius: 15px;
+    border: 5px solid #FFC97C;
+    grid-area: footer;
+    text-align: center;
+    background-color:rgba(	253, 94, 83, 0.3);
+    color: azure;
+}
+
+

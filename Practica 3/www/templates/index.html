@@ -1,0 +1,16 @@
+{% extends "main_template.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/styles/style.css">
+{% endblock %}
+
+{% block content %}
+    <div class="activities">
+        {% for actividad in actividades %}
+        <a class="activity" href="actividad.php?id={{ actividad['id']|raw }}">
+            <img src="{{ actividad['miniatura'] }}" class="activity_icon">
+            <div class="activity_name"> {{ actividad['tipoActividad'] }} </div>
+        </a>
+        {% endfor %}
+    </div>
+{% endblock %}
